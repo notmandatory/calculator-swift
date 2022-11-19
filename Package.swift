@@ -25,10 +25,10 @@ let package = Package(
         .binaryTarget(
             name: "calculatorFFI",
             url: "https://github.com/notmandatory/calculator-swift/releases/download/0.1.0/calculatorFFI.xcframework.zip",
-            checksum: "36be707d7b5f300cac8b9843c280770a1d9c985694ace92cc1c3dca261875da4"),
+            checksum: "a9aac014a4e969d7a1ab274398a8897c09c7db3e54717e57c8def6d35553aac1"),
         .target(
             name: "Calculator",
-            dependencies: ["calculator"]),
+            dependencies: ["calculatorFFI"]),
         .testTarget(
             name: "CalculatorTests",
             dependencies: ["Calculator"]),
