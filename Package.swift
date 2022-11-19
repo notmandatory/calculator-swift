@@ -22,10 +22,13 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .binaryTarget(name: "calculatorFFI", path: "./calculatorFFI.xcframework"),
+        .binaryTarget(
+            name: "calculatorFFI",
+            url: "https://github.com/notmandatory/calculator-swift/releases/download/0.1.0/calculatorFFI.xcframework.zip",
+            checksum: "36be707d7b5f300cac8b9843c280770a1d9c985694ace92cc1c3dca261875da4"),
         .target(
             name: "Calculator",
-            dependencies: ["calculatorFFI"]),
+            dependencies: ["calculator"]),
         .testTarget(
             name: "CalculatorTests",
             dependencies: ["Calculator"]),
